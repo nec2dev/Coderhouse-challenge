@@ -1,0 +1,159 @@
+/*[TABLE OF CONTENTS]
+0. Standard CSS Reset  
+1. Global Styles & Variables
+2. Aimations & Effects
+3. Header: logo, navbar, searchbar Main: presentation, facemenu, Logcard
+4. Solutions 
+5. Projects
+6. Contacts
+7. Prices
+8. Cv
+9. Footer, copyright
+10. Mediaqueries & Grids*/
+@import 'reset', 'globals', 'animations';
+@import 'header';
+/*____________3.Main: presentation,facemenu,logcard____________*/
+main {
+    background-image: url(../img/background_space.webp); background-repeat: no-repeat; background-position: top;
+    height: 67.5rem;
+    padding-top: 7rem;
+}
+.mainFacemenu {
+    text-align: center;
+    height: auto;
+    overflow: visible;
+    a {
+        text-decoration: none;
+    color: white;
+    font-family: "microgramma";
+    font-size: 1.3rem;
+    }
+    img {
+        position: relative;
+        z-index: 0;
+    }
+}
+.mainLogcard {
+    background-image: linear-gradient(135deg, rgba(90, 107, 151, 0.432) 0%, rgba(15, 34, 49, 0.432) 100%);
+    border-radius: 1rem; 
+    padding: 2rem;
+    text-align: center;
+    filter: opacity(80);
+}
+.mainPresentation {
+    text-align: left;
+    max-width: 40rem;
+    z-index: 3;
+}
+/*____________4.Solutions____________*/
+.solutions {
+    height: 33.75rem;
+    padding-top: 4rem;
+}
+/*____________5.Projects____________*/
+.projectsback {
+    background-image: linear-gradient(180deg, #0235ff 20%, #40d8fe 65%, #506F09 66%, #88B311 100%);
+}
+/*____________6.Contacts____________*/
+.contacts {
+    background-image: url(../img/contactwallpaper.png);
+    box-shadow: $box-shadow;
+    color: rgb(65, 65, 65);
+    border-radius: 1rem; 
+    margin: 2rem;  
+    padding: 0.8rem 1.6rem;
+}
+.contacts-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: salmon;
+    color: $terciary-color;
+    border-radius: 1rem;
+    padding: 0.4rem 1.6rem;
+}
+.contacts-left iframe {
+    width: 100%;
+    height: 16rem;
+    border-radius: 1rem;
+}
+.contacts-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.4rem 1.6rem;
+}
+.contacts-right .textInput input {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid salmon;
+}
+.contactsFluid {
+    background: linear-gradient(90deg, rgba(217,117,108,1) 0%, rgba(255,189,167,1) 35%, rgba(255,243,182,1) 100%);
+    color: rgb(65, 65, 65);
+}
+.container .btnContacts a button {
+    background: salmon;
+}
+.contactIlus {
+    border-radius: 1rem;
+    margin-top: 2rem;
+    overflow: hidden;
+    img {
+        position: absolute;
+        margin-top: -2.5rem;
+    }
+}
+/*____________7.Prices____________*/
+.prices {
+    height: auto;
+}
+/*____________8.Cv____________*/
+.cv {
+    height: auto;
+}
+.cv-left {
+    ul{
+        li {
+            border-bottom-style: solid;
+            border-width: 2px;
+            padding: 0.5rem 0;
+            font-size: 0.8em;
+        }
+    }
+} 
+.cv-left .fa {
+    font-size: 1.5em;
+    margin: 0.3rem;
+}
+.cv-center {
+    background: linear-gradient(60deg, rgb(30, 19, 71) 0%, rgb(6, 62, 70) 100%);
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+.cv-center h2, .cv-right h2 {
+    font-weight: 900;
+    text-align: right;
+}
+.cv-right {
+    padding: 1rem;
+}
+.cv-friends {
+    z-index:1;
+    margin: 1rem;
+}
+.logofriends {
+    z-index:2;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    overflow: hidden;
+}
+@import 'footer';
+@import 'mediaqueriesGrids';
