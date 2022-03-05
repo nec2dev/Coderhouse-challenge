@@ -1,0 +1,46 @@
+/*_____________2.Header: logo, navbar, searchbar_____________*/
+header {
+  background-image: url(../img/background_space_header.webp);
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 6rem;
+  position: relative;
+  .container input {
+    border-radius: 2em;
+    outline: solid rgba(255, 255, 255, 0.534);
+    background-color: $terciary-color;
+    color: $secondary-color;
+    height: 1.2rem;
+    font-weight: bold;
+    font-size: 0.8em;
+    .container-fluid .container {
+      a,
+      p,
+      h3 {
+        color: $secondary-color;
+      }
+      .fab {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+.headerNoImage {
+  background-image: none;
+}
+#navbarSubDropdown {
+  background: rgba(141, 141, 141, 0.226); 
+  backdrop-filter: saturate(180%) blur(10px); 
+  border-radius: 1rem; 
+  padding: 1rem;
+  .dropdown-item {
+    color: $terciary-color;
+  }
+  a:hover {
+    background-color: $primary-color;
+    border-radius: 1rem;
+  }
+  .dropdown-menu a:hover {
+    background-color: $primary-color;
+  }
+}
