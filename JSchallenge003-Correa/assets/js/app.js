@@ -93,8 +93,8 @@ function newClientQuote() {
 
       if (alephandriaFlagquote == "S") {
         alephandriaquote = 8000;
-      }else{
-         alephandriaquote = 0;
+      } else {
+        alephandriaquote = 0;
       }
 
       searchAndDestroy();
@@ -148,37 +148,42 @@ function newClientQuote() {
 }
 
 function searchAndDestroy() {
-  const destroySolution = prompt(
-    "Desea quitar una solución de su proyecto?:"
+  const destroyFlagSolution = prompt(
+    "Actualmente ha seleccionado las siguientes soluciones: " +
+      nec2solutions +
+      ". Desea quitar una solución de su proyecto? Conteste S o N:"
   );
-  const indexsolution = paises.indexOf(destroySolution);
-  if (indexsolution > -1) {
-    nec2solutions.splice(indexsolution, 1);
+  if (destroyFlagSolution == "S") {
+    let destroySolution = prompt("Escriba la solución que desea quitar");
+    const indexsolution = nec2solutions.indexOf(destroySolution);
+    if (indexsolution > -1) {
+      nec2solutions.splice(indexsolution, 1);
+      alert("Su nuevo kit de soluciones se compone de: " + nec2solutions);
+    } else {
+        alert(
+        "No se ha modificado nada, no se encontró la solución ingresada: ",
+        destroySolution
+      );
+    }
   } else {
-    alert.warn(
-      "No se encontró la solución ingresada:",
-      destroySolution
-    );
-    return;
-  }
-  alert.table(nec2solutions);
-}
-
-function addSolution() {
-  const newSolution = prompt("Ingrese el país que desea agregar:");
+    const newSolution = prompt("Ingrese La nueva solución que usted proponga que desea agregar a las de su proyecto, nosotros nos comunicaremos comentándole el presupuesto detallado:");
   const result = nec2solutions.includes(newSolution);
   if (result) {
-    alert.warn(
+    alert(
       "La solución que ha intentado ingresar",
       newSolution,
-      "ya existe en su presupuesto."
+      ", ya existe en su presupuesto."
     );
     return;
   } else {
     nec2solutions.push(newSolution);
-    alert.table(nec2solutions);
-    alert.info("ℹ️ ", newSolution, "la solución se agregó exitosamente.");
+    alert(nec2solutions);
+    alert("ℹ️ ", newSolution, "la solución se agregó exitosamente.");
+  }
   }
 }
-newClientQuote();
 
+function addSolution() {
+  
+}
+newClientQuote();
