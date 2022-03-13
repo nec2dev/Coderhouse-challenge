@@ -8,22 +8,22 @@ class finalQuoter {
     numberOfSprints,
     alephandriaquote
   ) {
-    this.sol1quote = alkemiquote;
-    this.sol2quote = aparzeroquote;
-    this.sol3quote = albatrossquote;
-    this.sol4quote = arquitepiaquote;
-    this.sol5quote = abitatquote;
-    this.sol11quote = numberOfSprints;
-    this.sol6quote = alephandriaquote;
+    this.alkemiquote = alkemiquote;
+    this.aparzeroquote = aparzeroquote;
+    this.albatrossquote = albatrossquote;
+    this.arquitepiaquote = arquitepiaquote;
+    this.abitatquote = abitatquote;
+    this.numberOfSprints = numberOfSprints;
+    this.alephandriaquote = alephandriaquote;
   }
   quoteSolutions() {
     let quote =
-      this.sol1quote +
-      this.sol2quote +
-      this.sol3quote +
-      this.sol4quote +
-      this.sol5quote * this.sol11quote +
-      this.sol6quote +
+      this.alkemiquote +
+      this.aparzeroquote +
+      this.albatrossquote +
+      this.arquitepiaquote +
+      this.abitatquote * this.numberOfSprints +
+      this.alephandriaquote +
       shipping;
     let finalQuote = quote + quote * tax;
     return finalQuote;

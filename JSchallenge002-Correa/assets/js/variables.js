@@ -1,3 +1,4 @@
+const nec2solutions {alkemi, aparzero, albatros, arquitepia, abitat, alephandria}
 let nec2Globalquote = "";
 let nec2quote = 48000;
 let nec2Flagquote = false;
@@ -16,7 +17,8 @@ let alephandriaFlagquote = false;
 let numberOfSprints = 1;
 let tax = 0;
 let clientCountry = "ARG";
-if (clientCountry=="ARG") 
+if (clientCountry=="ARG"){ 
 tax = 0.21;
+}
 const dollarblue = 211;
 const shipping = 290;
