@@ -169,15 +169,15 @@ function addSolution() {
   const result = nec2solutions.includes(newSolution);
   if (result) {
     alert.warn(
-      "El país ingresado",
+      "La solución que ha intentado ingresar",
       newSolution,
-      "ya existe en el array."
+      "ya existe en su presupuesto."
     );
     return;
   } else {
     nec2solutions.push(newSolution);
     alert.table(nec2solutions);
-    alert.info("ℹ️ ", newSolution, "se agregó exitosamente.");
+    alert.info("ℹ️ ", newSolution, "la solución se agregó exitosamente.");
   }
 }
 newClientQuote();
