@@ -1,4 +1,5 @@
 const nec2solutions = ['alkemi', 'aparzero', 'albatross', 'arquitepia', 'abitat', 'alephandria'];
+let approvedsolutions = [];
 let nec2Globalquote = "";
 let nec2quote = 48000;
 let nec2Flagquote = false;

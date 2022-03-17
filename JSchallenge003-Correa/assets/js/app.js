@@ -37,6 +37,7 @@ function newClientQuote() {
 
       if (alkemiFlagquote == "S") {
         alkemiquote = 8000;
+        approvedsolutions.push("alkemi");
       } else {
         alkemiquote = 0;
       }
@@ -47,6 +48,7 @@ function newClientQuote() {
 
       if (aparzeroFlagquote == "S") {
         aparzeroquote = 8000;
+        approvedsolutions.push("aparzero");
       } else {
         aparzeroquote = 0;
       }
@@ -57,6 +59,7 @@ function newClientQuote() {
 
       if (albatrossFlagquote == "S") {
         albatrossquote = 8000;
+        approvedsolutions.push("albatross");
       } else {
         albatrossquote = 0;
       }
@@ -67,6 +70,7 @@ function newClientQuote() {
 
       if (arquitepiaFlagquote == "S") {
         arquitepiaquote = 8000;
+        approvedsolutions.push("arquitepia");
       } else {
         arquitepiaquote = 0;
       }
@@ -77,6 +81,7 @@ function newClientQuote() {
 
       if (abitatFlagquote == "S") {
         abitatquote = 8000;
+        approvedsolutions.push("abitat");
       } else {
         abitatquote = 0;
       }
@@ -93,6 +98,7 @@ function newClientQuote() {
 
       if (alephandriaFlagquote == "S") {
         alephandriaquote = 8000;
+        approvedsolutions.push("alephandria");
       } else {
         alephandriaquote = 0;
       }
@@ -150,40 +156,40 @@ function newClientQuote() {
 function searchAndDestroy() {
   const destroyFlagSolution = prompt(
     "Actualmente ha seleccionado las siguientes soluciones: " +
-      nec2solutions +
+    approvedsolutions +
       ". Desea quitar una solución de su proyecto? Conteste S o N:"
   );
   if (destroyFlagSolution == "S") {
     let destroySolution = prompt("Escriba la solución que desea quitar");
-    const indexsolution = nec2solutions.indexOf(destroySolution);
+    const indexsolution = approvedsolutions.indexOf(destroySolution);
     if (indexsolution > -1) {
-      nec2solutions.splice(indexsolution, 1);
-      alert("Su nuevo kit de soluciones se compone de: " + nec2solutions);
+      approvedsolutions.splice(indexsolution, 1);
+      alert("Su nuevo kit de soluciones se compone de: " + approvedsolutions);
     } else {
-        alert(
+      alert(
         "No se ha modificado nada, no se encontró la solución ingresada: ",
         destroySolution
       );
     }
   } else {
-    const newSolution = prompt("Ingrese La nueva solución que usted proponga que desea agregar a las de su proyecto, nosotros nos comunicaremos comentándole el presupuesto detallado:");
-  const result = nec2solutions.includes(newSolution);
-  if (result) {
-    alert(
-      "La solución que ha intentado ingresar",
-      newSolution,
-      ", ya existe en su presupuesto."
+    const newSolution = prompt(
+      "Ingrese La nueva solución que usted proponga que desea agregar a las de su proyecto, nosotros nos comunicaremos comentándole el presupuesto detallado:"
     );
-    return;
-  } else {
-    nec2solutions.push(newSolution);
-    alert(nec2solutions);
-    alert("ℹ️ ", newSolution, "la solución se agregó exitosamente.");
-  }
+    const result = approvedsolutions.includes(newSolution);
+    if (result) {
+      alert(
+        "La solución que ha intentado ingresar",
+        newSolution,
+        ", ya existe en su presupuesto."
+      );
+      return;
+    } else {
+      approvedsolutions.push(newSolution);
+      alert(approvedsolutions);
+      alert("ℹ️ ", newSolution, "la solución se agregó exitosamente.");
+    }
   }
 }
 
-function addSolution() {
-  
-}
+function addSolution() {}
 newClientQuote();
